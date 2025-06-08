@@ -1,22 +1,36 @@
 # Core FastAPI dependencies
-fastapi>=0.104.0
-uvicorn[standard]>=0.24.0
+fastapi==0.115.12
+uvicorn[standard]==0.34.3
 
-# CORS support (already included in FastAPI, but explicit for clarity)
-# fastapi.middleware.cors is part of FastAPI
+# Document processing and text handling
+unstructured==0.17.2
+langchain==0.3.25  # For text splitting functionality
+langchain-core==0.3.64  # Core langchain components
+langchain-text-splitters==0.3.8  # Specific text splitter components
 
-# Document processing
-unstructured>=0.10.0
+# File handling and parsing
+python-multipart==0.0.20  # For form data and file uploads
+pypdf==5.6.0  # PDF processing
+filetype==1.2.0  # File type detection
 
-# Additional useful dependencies for FastAPI projects
-python-multipart>=0.0.6  # For form data and file uploads
-pydantic>=2.0.0  # Data validation (included with FastAPI but explicit)
+# Data validation and serialization
+pydantic==2.11.5
+pydantic-core==2.33.2
 
-# Optional but commonly used
-requests>=2.31.0  # For HTTP client functionality
-python-dotenv>=1.0.0  # For environment variable management
+# HTTP client and utilities
+requests==2.32.3
+httpx==0.28.1
+aiofiles==24.1.0  # Async file operations
 
-# Development dependencies (uncomment if needed)
+# Environment and configuration
+python-dotenv==1.1.0
+
+# Natural language processing
+nltk==3.9.1
+numpy==2.3.0
+
+# Development and testing dependencies (uncomment if needed)
 # pytest>=7.4.0
 # pytest-asyncio>=0.21.0
-# httpx>=0.25.0  # For testing FastAPI endpoints
+# black>=23.0.0  # Code formatting
+# isort>=5.12.0  # Import sorting
